@@ -12,10 +12,10 @@ const uploadFile = async (file) => {
 
 const uploadMultipleFile = async (files) => {
     try {
-        let newFiles = files.map(data => {
+        let newFiles = files.map(file => {
             return { "fileName" : file.originalname , "url":file.path };
         })
-        return await repository.create(newFile);
+        return await repository.create(newFiles);
     } catch (error) {
         throw error;
     }
