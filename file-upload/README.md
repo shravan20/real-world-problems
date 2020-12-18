@@ -29,7 +29,7 @@ As Multer documentation states,
 
 Following code:
 
-`javascript
+```javascript
 import express from 'express';
 import morgan from  'morgan';
 import bodyParser from 'body-parser';
@@ -39,7 +39,7 @@ const app = express();
 app.listen(process.env.PORT, () =>
   console.log('App listening on port ${process.env.PORT}'),
 );
-`
+```
 
 To run the code:
 
