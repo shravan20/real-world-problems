@@ -150,3 +150,11 @@ Example: `localhost:5000/fileName.extension`
 
 
 File upload can be an intimidating topic, but it doesn't have to be hard to implement. With Express and Multer, handling multipart/form-data is easy and straightforward. 
+
+**Note:**
+1. Make sure you add `.env` file inside the `./file-upload`.
+
+```javascript
+PORT=5000
+MONGODB_URL=mongodb://localhost:27017/asset
+```
