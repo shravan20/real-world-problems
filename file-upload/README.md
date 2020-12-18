@@ -67,3 +67,9 @@ To run the code:
 ├── package.json
 ├── app.js
 ```
+
+
+*Step 5:* Next, using the Multer for uploading images. Basically, create a middleware for handling form-data uploaded.
+
+
+
