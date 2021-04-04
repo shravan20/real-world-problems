@@ -6,9 +6,9 @@ const PORT = 3030 | process.env.PORT;
 const app = express();
 
 app.use(cors());
+app.use(morgan('dev'));
 
 app.use(express.json());
-app.use(express.urlencoded());
 
 
 app.listen(PORT, ()=>{
