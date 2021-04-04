@@ -1,11 +1,29 @@
 import fetch from 'node-fetch';
 
 
-exports.apiFetch = async (url, body, method) => {
+const apiFetch = async (url, body, method) => {
 
-    return await fetch(url, {
-        method: method,
-        body: body
-    });
+    try {
+        console.log(url, body, method)
+        let options ={
+            method: method,
+            body: JSON.stringify(body),
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        };
 
+        let response = await fetch(url, options);
+        return await response.json();    
+
+    } catch (error) {
+
+        console.log(error);
+        throw error;
+    }
 };
+
+export {
+    apiFetch
+}

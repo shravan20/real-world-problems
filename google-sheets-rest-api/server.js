@@ -1,9 +1,9 @@
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
-import UserRouter from "./src/api/UserMgmt/router";
+import router from "./src/api/UserMgmt/router.js";
 
-const PORT = 3030 | process.env.PORT;
+const PORT = process.env.PORT || 3030 ;
 const app = express();
 
 app.use(cors());
@@ -11,7 +11,7 @@ app.use(morgan('dev'));
 
 app.use(express.json());
 
-app.use('/api', UserRouter);
+app.use('/api', router);
 
 app.listen(PORT, ()=>{
     console.log(`Listening to port ${PORT}`);

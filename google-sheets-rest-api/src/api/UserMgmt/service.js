@@ -1,15 +1,19 @@
-import { apiFetch } from "../../utils/apiCall";
-import { GOOGLE_SHEET_API } from "../../constants/url";
+import { apiFetch } from "../../utils/apiCall.js";
+import { GOOGLE_SHEET_API } from "../../constants/url.js";
 
 const createUser = async (userBody) => {
     try {
-        return await apiFetch(GOOGLE_SHEET_API, userBody, "POST");
+        
+        let data = await apiFetch(GOOGLE_SHEET_API, userBody, "POST");
+        console.log(data);
+        return data;
+
     } catch (error) {
         throw error;
     }
      
 }
 
-module.exports = {
+export {
     createUser
 };
