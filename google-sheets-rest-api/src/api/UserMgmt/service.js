@@ -4,8 +4,8 @@ import { GOOGLE_SHEET_API } from "../../constants/url.js";
 const createUser = async (userBody) => {
     try {
         
-        let data = await apiFetch(GOOGLE_SHEET_API, userBody, "POST");
-        console.log(data);
+        let data = await apiFetch(GOOGLE_SHEET_API, "POST", userBody);
+        
         return data;
 
     } catch (error) {
@@ -14,6 +14,11 @@ const createUser = async (userBody) => {
      
 }
 
+const getUsers = async () => {
+    return await apiFetch(GOOGLE_SHEET_API,"GET");
+}
+
 export {
-    createUser
+    createUser,
+    getUsers
 };

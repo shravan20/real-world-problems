@@ -1,11 +1,11 @@
 import fetch from 'node-fetch';
 
 
-const apiFetch = async (url, body, method) => {
+const apiFetch = async (url, method, body) => {
 
     try {
-        console.log(url, body, method)
-        let options ={
+        
+        let options = {
             method: method,
             body: JSON.stringify(body),
             mode: "cors",

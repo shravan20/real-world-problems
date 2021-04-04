@@ -3,7 +3,7 @@ import * as controller from './controller.js';
 
 let router = Router();
 
-router.get('/', (req,res)=>res.send({ status: "checked" }));
 router.post('/user', controller.createUser);
+router.get('/user', controller.getUsers);
 
 export default router;

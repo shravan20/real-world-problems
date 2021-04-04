@@ -11,6 +11,15 @@ const createUser = async (req, res, next) => {
     }
 }
 
+const getUsers = async (req, res, next) => {
+    try {
+        res.status(200).send(await service.getUsers());
+    } catch (error) {
+        
+    }
+}
+
 export {
-    createUser
+    createUser,
+    getUsers
 };
